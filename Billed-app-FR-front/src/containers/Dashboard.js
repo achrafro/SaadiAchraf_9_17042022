@@ -146,14 +146,11 @@ export default class {
   };
 
   handleShowTickets(e, bills, index) {
-    // changes here ->
+    // 
     bills.forEach((bill) => {
       //console.log(bill);
-      // .off Remove an event handler.
+      // .off pour supprimer l'event handler.
 
-      // you want to remove the first of those event listeners, the one that fires doSomething. How do you do that?
-
-      // $("#element").off("click");
 
       $(`#open-bill${bill.id}`).off("click");
     });
@@ -181,8 +178,7 @@ export default class {
 
     bills.forEach((bill) => {
       $(`#open-bill${bill.id}`).click("click.mynamespace", (e) => {
-        //debugger;
-        //console.log(e);
+       
         this.handleEditTicket(e, bill, bills);
       });
     });
